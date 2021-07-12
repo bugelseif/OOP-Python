@@ -1,12 +1,12 @@
-import pessoa
+from Pessoa import Pessoa
 
-p1 = pessoa.novaPessoa('Bruna', 'Ferreira', 30)
-p2 = pessoa.novaPessoa('Camila', 'Lira', 20)
+p1 = Pessoa('Bruna', 'Ferreira', 30)
+p2 = Pessoa('Camila', 'Lira', 20)
 
-print(pessoa.nomeCompleto(p2))
+print(Pessoa.nomeCompleto(p1))
 
-pessoa.trocarSobrenome(p1, 'Elseif')
-print(pessoa.nomeCompleto(p1))
+Pessoa.trocarSobrenome(p1, 'Elseif')
+print(Pessoa.nomeCompleto(p1))
 
-pessoa.aniversario(p2)
-print(pessoa.idade(p2))
+Pessoa.aniversario(p2)
+print(Pessoa.idade(p2))

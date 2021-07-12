@@ -1,26 +1,17 @@
-def init(pessoa, nome, sobrenome, idade):
-    pessoa['nome'] = nome
-    pessoa['sobrenome'] = sobrenome
-    pessoa['idade'] = idade
+class Pessoa:
+    def __init__(self, nome, sobrenome, idade):
+        self.nome = nome
+        self.sobrenome = sobrenome
+        self.idade = idade
 
+    def nomeCompleto(self):
+        return f"{self.nome} {self.sobrenome}"
 
-def novaPessoa(nome, sobrenome, idade):
-    pessoa = {}
-    init(pessoa, nome, sobrenome, idade)
-    return pessoa
+    def trocarSobrenome(self, sobrenome):
+        self.sobrenome = sobrenome
 
+    def aniversario(self):
+        self.idade += 1
 
-def nomeCompleto(pessoa):
-    return f"{pessoa['nome']} {pessoa['sobrenome']} "
-
-
-def trocarSobrenome(pessoa, sobrenome):
-    pessoa['sobrenome'] = sobrenome
-
-
-def aniversario(pessoa):
-    pessoa['idade'] += 1
-
-
-def idade(pessoa):
-    return pessoa['idade']
+    def idade(self):
+        return self.idade
