@@ -1,9 +1,13 @@
+def init(pessoa, nome, sobrenome, idade):
+    pessoa['nome'] = nome
+    pessoa['sobrenome'] = sobrenome
+    pessoa['idade'] = idade
+
+
 def novaPessoa(nome, sobrenome, idade):
-    return{
-        'nome': nome,
-        'sobrenome': sobrenome,
-        'idade': idade,
-    }
+    pessoa = {}
+    init(pessoa, nome, sobrenome, idade)
+    return pessoa
 
 
 def nomeCompleto(pessoa):
