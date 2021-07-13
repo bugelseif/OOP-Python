@@ -1,5 +1,16 @@
 class Pessoa:
+    idInc = 0
+
+    @classmethod
+    def novoId(cls):
+        cls.idInc += 1
+        return cls.idInc
+
     def __init__(self, nome, sobrenome, idade):
+        if not self.validaNome(nome):
+            raise ValueError('Nome invalido')
+
+        self.id = self.novoId()
         self.nome = nome
         self.sobrenome = sobrenome
         self.idade = idade
@@ -13,5 +24,12 @@ class Pessoa:
     def aniversario(self):
         self.idade += 1
 
-    def idade(self):
+    def retornaIdade(self):
         return self.idade
+
+    @staticmethod
+    def validaNome(nome):
+        return len(nome) >= 3 and ' ' not in nome
+
+
+print(Pessoa.validaNome('Bruna'))

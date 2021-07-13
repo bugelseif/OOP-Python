@@ -9,4 +9,11 @@ p1.trocarSobrenome('Elseif')
 print(p1.nomeCompleto())
 
 p1.aniversario()
-print(p2.idade())
+print(p2.retornaIdade())
+
+print(p2.validaNome(p2.nome))
+
+p3 = Pessoa('buuu', 'sem sobrenome', 25)
+
+print(p2.id)
+print(Pessoa.idInc)
